@@ -34,6 +34,7 @@ menu:
           - jamf-pro
         auth: auth_jamf_pro
         status: beta
+        warning: "This module is currently being developed and may have unexepected results."
 
       - id: jamf-setup-checklist
         label: "Jamf Setup Checklist"
