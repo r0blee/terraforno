@@ -33,7 +33,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_pro
-        status: stable
+        status: beta
 
       - id: jamf-setup-checklist
         label: "Jamf Setup Checklist"
@@ -42,7 +42,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_pro
-        status: stable
+        status: coming-soon
 
       - id: platform-sso
         label: "Platform SSO"
@@ -57,7 +57,7 @@ menu:
               - jamf-pro
               - azure-ad
             auth: auth_jamf_pro
-            status: stable
+            status: beta
 
           - id: okta
             label: "Okta"
@@ -67,7 +67,7 @@ menu:
               - jamf-pro
               - okta
             auth: auth_jamf_pro
-            status: stable
+            status: coming-soon
 
       - id: jamf-setup-reset
         label: "Jamf Setup and Reset"
@@ -76,7 +76,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_pro
-        status: stable
+        status: coming-soon
         warning: "This module will reset your Jamf configuration. Ensure you have a backup before proceeding."
 
       - id: jamf-mobile-assist
@@ -86,7 +86,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_pro
-        status: stable
+        status: coming-soon
 
   - id: jamf-protect
     label: "Jamf Protect"
@@ -100,7 +100,7 @@ menu:
         apis:
           - jamf-protect
         auth: auth_jamf_protect_oauth2
-        status: stable
+        status: coming-soon
 
       - id: remediation-workflows
         label: "Remediation Workflows"
@@ -109,7 +109,7 @@ menu:
         apis:
           - jamf-protect
         auth: auth_jamf_protect_oauth2
-        status: stable
+        status: coming-soon
 
   - id: jamf-connect
     label: "Jamf Connect"
@@ -123,7 +123,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_connect
-        status: stable
+        status: coming-soon
 
       - id: privilege-elevation
         label: "Configure Privilege Elevation"
@@ -132,7 +132,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_pro
-        status: stable
+        status: beta
 
       - id: access-policies
         label: "Configure Access Policies"
@@ -141,7 +141,7 @@ menu:
         apis:
           - jamf-security-cloud
         auth: auth_jamf_security_cloud_oauth2
-        status: stable
+        status: coming-soon
   - id: jamf-platform
     label: "Jamf Platform"
     description: "Configurations for Jamf Platform using the Jamf Platform APIs"
