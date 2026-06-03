@@ -112,6 +112,15 @@ menu:
         auth: auth_jamf_protect_oauth2
         status: coming-soon
 
+        - id: remediasoar
+          label: "RemediaSOAR"
+          description: "Configure a RemediaSOAR example Workflows"
+          module: modules/jamf-protect/remediations/remediasoar
+          apis:
+            - jamf-protect
+          auth: auth_jamf_protect_oauth2
+          status: coming-soon
+
   - id: jamf-connect
     label: "Jamf Connect"
     description: "Configurations for Jamf Connect using the Jamf Pro and Jamf Security Cloud APIs"
