@@ -142,3 +142,17 @@ menu:
           - jamf-security-cloud
         auth: auth_jamf_security_cloud_oauth2
         status: stable
+
+        id: jamf-platform
+    label: "Jamf Platform"
+    description: "Configurations for Jamf Platform using the Jamf Platform APIs"
+    items:
+
+      - id: compliance-cis1
+        label: "Configure CIS Level 1 Benchmark"
+        description: "Configure Jamf Connect login window settings and identity provider"
+        module: "modules/jamf-connect/connect-login"
+        apis:
+          - jamf-platform
+        auth: auth_jamf_platform
+        status: coming-soon
