@@ -58,7 +58,7 @@ menu:
               - jamf-pro
               - azure-ad
             auth: auth_jamf_pro
-            status: beta
+            status: coming-soon
 
           - id: okta
             label: "Okta"
@@ -161,7 +161,7 @@ menu:
         apis:
           - jamf-pro
         auth: auth_jamf_pro
-        status: beta
+        status: coming-soon
 
       - id: access-policies
         label: "Configure Access Policies"
