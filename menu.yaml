@@ -1,0 +1,144 @@
+# ═══════════════════════════════════════════════════════════════
+#  terraforno — menu.yaml
+#
+#  Fetched at startup from GitHub to dynamically build the menu.
+#  Hosted at: https://raw.githubusercontent.com/your-org/terraforno/main/menu.yaml
+#
+#  Structure:
+#    menu[]                  top-level menu items
+#      .id                   unique identifier (matches module folder name)
+#      .label                display text shown in the menu
+#      .description          one-line summary (shown on hover/detail views)
+#      .items[]              sub-menu items (omit for leaf nodes)
+#      .module               relative path to the deploy.sh folder (leaf nodes only)
+#      .apis[]               which Jamf APIs this module uses
+#      .auth                 auth function to call (from lib/auth.sh)
+#      .status               stable | beta | coming-soon
+#      .warning              optional warning shown before deploy mode selection
+# ═══════════════════════════════════════════════════════════════
+
+version: "1.0"
+
+menu:
+
+  - id: jamf-pro
+    label: "Jamf Pro"
+    description: "Configurations for Jamf Pro using the Jamf Pro and Jamf Platform APIs"
+    items:
+
+      - id: jamf-setup-manager
+        label: "Jamf Setup Manager"
+        description: "Configure the Jamf Setup Manager enrollment experience"
+        module: "modules/jamf-pro/jamf-setup-manager"
+        apis:
+          - jamf-pro
+        auth: auth_jamf_pro
+        status: stable
+
+      - id: jamf-setup-checklist
+        label: "Jamf Setup Checklist"
+        description: "Deploy a Jamf Setup Checklist configuration"
+        module: "modules/jamf-pro/jamf-setup-checklist"
+        apis:
+          - jamf-pro
+        auth: auth_jamf_pro
+        status: stable
+
+      - id: platform-sso
+        label: "Platform SSO"
+        description: "Configure Platform Single Sign-On with an identity provider"
+        items:
+
+          - id: entra-id
+            label: "Entra ID"
+            description: "Platform SSO using Microsoft Entra ID"
+            module: "modules/jamf-pro/platform-sso/entra-id"
+            apis:
+              - jamf-pro
+              - azure-ad
+            auth: auth_jamf_pro
+            status: stable
+
+          - id: okta
+            label: "Okta"
+            description: "Platform SSO using Okta"
+            module: "modules/jamf-pro/platform-sso/okta"
+            apis:
+              - jamf-pro
+              - okta
+            auth: auth_jamf_pro
+            status: stable
+
+      - id: jamf-setup-reset
+        label: "Jamf Setup and Reset"
+        description: "Reset and reconfigure a Jamf environment"
+        module: "modules/jamf-pro/jamf-setup-reset"
+        apis:
+          - jamf-pro
+        auth: auth_jamf_pro
+        status: stable
+        warning: "This module will reset your Jamf configuration. Ensure you have a backup before proceeding."
+
+      - id: jamf-mobile-assist
+        label: "Jamf Mobile Assist"
+        description: "Configure Jamf Mobile Assist"
+        module: "modules/jamf-pro/jamf-mobile-assist"
+        apis:
+          - jamf-pro
+        auth: auth_jamf_pro
+        status: stable
+
+  - id: jamf-protect
+    label: "Jamf Protect"
+    description: "Configurations for Jamf Protect using the Jamf Protect API"
+    items:
+
+      - id: custom-analytics
+        label: "Custom Analytics"
+        description: "Deploy custom analytics configurations for Jamf Protect"
+        module: "modules/jamf-protect/custom-analytics"
+        apis:
+          - jamf-protect
+        auth: auth_jamf_protect_oauth2
+        status: stable
+
+      - id: remediation-workflows
+        label: "Remediation Workflows"
+        description: "Configure automated remediation workflows in Jamf Protect"
+        module: "modules/jamf-protect/remediation-workflows"
+        apis:
+          - jamf-protect
+        auth: auth_jamf_protect_oauth2
+        status: stable
+
+  - id: jamf-connect
+    label: "Jamf Connect"
+    description: "Configurations for Jamf Connect using the Jamf Pro and Jamf Security Cloud APIs"
+    items:
+
+      - id: connect-login
+        label: "Configure Jamf Connect Login"
+        description: "Configure Jamf Connect login window settings and identity provider"
+        module: "modules/jamf-connect/connect-login"
+        apis:
+          - jamf-pro
+        auth: auth_jamf_connect
+        status: stable
+
+      - id: privilege-elevation
+        label: "Configure Privilege Elevation"
+        description: "Configure Jamf Connect privilege elevation policies"
+        module: "modules/jamf-connect/privilege-elevation"
+        apis:
+          - jamf-pro
+        auth: auth_jamf_connect
+        status: stable
+
+      - id: access-policies
+        label: "Configure Access Policies"
+        description: "Configure access policies via the Jamf Security Cloud"
+        module: "modules/jamf-connect/access-policies"
+        apis:
+          - jamf-security-cloud
+        auth: auth_jamf_security_cloud_oauth2
+        status: stable
