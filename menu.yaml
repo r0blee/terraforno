@@ -153,5 +153,5 @@ menu:
         module: "modules/jamf-platform/cis-lvl1"
         apis:
           - jamf-platform
-        auth: auth_jamf_platform
+        auth: auth_jamf_platform_oauth2
         status: coming-soon
