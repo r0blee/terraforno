@@ -131,7 +131,7 @@ menu:
         module: "modules/jamf-connect/privilege-elevation"
         apis:
           - jamf-pro
-        auth: auth_jamf_connect
+        auth: auth_jamf_pro
         status: stable
 
       - id: access-policies
