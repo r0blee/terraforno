@@ -142,7 +142,7 @@ menu:
           - jamf-security-cloud
         auth: auth_jamf_security_cloud_oauth2
         status: stable
-id: jamf-platform
+  - id: jamf-platform
     label: "Jamf Platform"
     description: "Configurations for Jamf Platform using the Jamf Platform APIs"
     items:
