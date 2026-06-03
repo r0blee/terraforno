@@ -102,6 +102,15 @@ menu:
           - jamf-protect
         auth: auth_jamf_protect_oauth2
         status: coming-soon
+        items:
+          - id: openclaw_directory_created
+            label: "Create analytic for Openclaw Directory Created"
+            description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
+            module: "modules/jamf-protect/custom-analytics/openclaw_directory_created"
+            apis: 
+              - jamf-protect
+            auth: auth_jamf_protect_oauth2
+            status: coming-soon
 
       - id: remediation-workflows
         label: "Remediation Workflows"
@@ -118,8 +127,17 @@ menu:
             description: "Configure a RemediaSOAR example Workflows"
             module: modules/jamf-protect/remediations/remediasoar
             apis:
-              - jamf-protect
-            auth: auth_jamf_protect_oauth2
+              - jamf-pro
+            auth: auth_jamf_pro
+            status: coming-soon
+
+          - id: aftermath
+            label: "Aftermath"
+            description: Configure a remediation using Aftermath SOAR Playbook"
+            module: modules/jamf-protect/remediations/aftermath
+            apis:
+              - jamf-pro
+            auth: auth_jamf_pro
             status: coming-soon
 
   - id: jamf-connect
