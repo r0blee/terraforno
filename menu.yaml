@@ -109,7 +109,7 @@ menu:
             apis: 
               - jamf-protect
             auth: auth_jamf_protect_oauth2
-            status: coming-soon
+            status: beta
 
       - id: remediation-workflows
         label: "Remediation Workflows"
