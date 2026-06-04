@@ -11,7 +11,7 @@
 
 GITHUB_REPO="https://github.com/r0blee/terraforno.git"
 MODULE="jamf-protect/custom-analytics/openclaw_directory_created"
-WORK_DIR="/tmp/terraforno/jamf-protect/custom-analytics"
+WORK_DIR="/tmp/terraforno/$MODULE"
 
 RED='\033[0;31m'
 YEL='\033[1;33m'
