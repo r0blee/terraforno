@@ -47,7 +47,7 @@ echo -e "${YEL}  Pulling latest config from GitHub...${RST}"
 rm -rf "$WORK_DIR"
 git clone --depth=1 --branch main --sparse \
     "$GITHUB_REPO" "$WORK_DIR" 2>&1 | sed 's/^/  /'
-git -C "$WORK_DIR" sparse-checkout set "$MODULE" 2>&1 | sed 's/^/  /'
+git -C "$WORK_DIR" sparse-checkout set "/modules/$MODULE" 2>&1 | sed 's/^/  /'
 
 if [ ! -d "$WORK_DIR/modules/$MODULE" ]; then
     echo -e "${RED}  Error: module '$MODULE' not found in repo.${RST}"
