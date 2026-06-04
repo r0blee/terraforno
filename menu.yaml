@@ -97,10 +97,6 @@ menu:
       - id: custom-analytics
         label: "Custom Analytics"
         description: "Deploy custom analytics configurations for Jamf Protect"
-        module: "modules/jamf-protect/custom-analytics"
-        apis:
-          - jamf-protect
-        auth: auth_jamf_protect_oauth2
         items:
           - id: openclaw_directory_created
             label: "Create analytic for Openclaw Directory Created"
@@ -114,10 +110,6 @@ menu:
       - id: remediation-workflows
         label: "Remediation Workflows"
         description: "Configure automated remediation workflows in Jamf Protect"
-        module: "modules/jamf-protect/remediation-workflows"
-        apis:
-          - jamf-protect
-        auth: auth_jamf_protect_oauth2
         items: 
 
           - id: remediasoar
