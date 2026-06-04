@@ -55,6 +55,15 @@ fi
 
 cd "$WORK_DIR/modules/$MODULE" || { auth_cleanup; exit 1; }
 
+# ── Verify Terraform configuration exists ────────────────────────
+if [ -z "$(find . -maxdepth 1 -name '*.tf' 2>/dev/null)" ]; then
+    echo -e "${RED}  Error: no Terraform configuration files found for this module.${RST}"
+    echo -e "${YEL}  The module may not have its .tf files added to the repository yet.${RST}"
+    auth_cleanup
+    rm -rf "$WORK_DIR"
+    exit 1
+fi
+
 # ── Terraform ────────────────────────────
 echo ""
 echo -e "${YEL}  Initialising Terraform...${RST}"
