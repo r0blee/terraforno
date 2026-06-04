@@ -10,7 +10,7 @@
 # ─────────────────────────────────────────
 
 GITHUB_REPO="https://github.com/r0blee/terraforno.git"
-MODULE="jamf-protect/custom-analytics"
+MODULE="jamf-protect/custom-analytics/openclaw_directory_created"
 WORK_DIR="/tmp/terraforno/jamf-protect/custom-analytics"
 
 RED='\033[0;31m'
