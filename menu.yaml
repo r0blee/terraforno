@@ -108,6 +108,7 @@ menu:
         label: "Custom Analytics"
         description: "Deploy custom analytics configurations for Jamf Protect"
         items:
+
           - id: openclaw_directory_created
             label: "Create analytic for OpenClaw Directory Created"
             description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
@@ -144,7 +145,7 @@ menu:
             auth: auth_jamf_protect_oauth2
             status: beta
 
-            - id: openclaw_skill_install_clawhub
+          - id: openclaw_skill_install_clawhub
             label: "Create analytic for OpenClaw Skill Install ClawHub"
             description: "This creates a custom analytic for detection of skills installed from Clawhub via npx command."
             module: "modules/jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
