@@ -170,7 +170,7 @@ menu:
 
           - id: aftermath
             label: "Aftermath"
-            description: Configure a remediation using Aftermath SOAR Playbook"
+            description: "Configure a remediation using Aftermath SOAR Playbook"
             module: modules/jamf-protect/remediations/aftermath
             apis:
               - jamf-pro
