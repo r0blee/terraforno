@@ -90,7 +90,7 @@ menu:
         status: coming-soon
 
       - id: internal-test
-        label: Internal Jamf internal-test
+        label: "Internal Jamf test"
         description: "Configure a super secret internal test"
         module: "modules/jamf-pro/internal-test"
         apis:
