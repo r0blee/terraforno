@@ -1,12 +1,12 @@
 #!/bin/bash
 # ─────────────────────────────────────────
-# ── Module Info ─────────────────────────────
+# ── Module Info ──────────────────────────
 # APIs:   Jamf Protect API
 # Auth:   auth_jamf_protect_oauth2
-# ─────────────────────────────────────────────
+# ─────────────────────────────────────────
 
-#  Custom Analytics — deploy.sh
-#  Provider: Jamf Protect Terraform Provider
+#  Create analytic for Openclaw Directory Created — deploy.sh
+#  Provider: Jamf-Concepts/jamfprotect
 # ─────────────────────────────────────────
 
 GITHUB_REPO="https://github.com/r0blee/terraforno.git"
@@ -24,10 +24,9 @@ source "$TERRAFORNO_DIR/lib/auth.sh"
 source "$TERRAFORNO_DIR/lib/mode.sh"
 
 echo ""
-echo -e "${BLD}  ── Custom Analytics ──${RST}"
+echo -e "${BLD}  ── Create analytic for Openclaw Directory Created ──${RST}"
 echo ""
 
-# ── Variables ────────────────────────────
 # ── Deployment mode ─────────────────────────
 select_deploy_mode
 
@@ -39,11 +38,9 @@ fi
 # ── Authentication ───────────────────────────
 auth_jamf_protect_oauth2
 
-# TODO: add any jamf-protect/custom-analytics-specific variables here
-
-# ── Pull config from GitHub ───────────────
+# ── Pull config from GitHub ──────────────────
 echo ""
-echo -e "${YEL}  Pulling latest config from GitHub...${RST}"
+echo -e "${YEL}  Pulling module config from GitHub...${RST}"
 rm -rf "$WORK_DIR"
 git clone --depth=1 --branch main \
     "$GITHUB_REPO" "$WORK_DIR" 2>&1 | sed 's/^/  /'
@@ -51,15 +48,16 @@ git clone --depth=1 --branch main \
 if [ ! -d "$WORK_DIR/modules/$MODULE" ]; then
     echo -e "${RED}  Error: module '$MODULE' not found in repo.${RST}"
     auth_cleanup
+    rm -rf "$WORK_DIR"
     exit 1
 fi
 
-cd "$WORK_DIR/modules/$MODULE" || { auth_cleanup; exit 1; }
+cd "$WORK_DIR/modules/$MODULE" || { auth_cleanup; rm -rf "$WORK_DIR"; exit 1; }
 
+# ── Generate provider configuration ──────────
 _write_provider_tf "auth_jamf_protect_oauth2"
 
-
-# ── Verify Terraform configuration exists ────────────────────────
+# ── Verify Terraform configuration exists ────
 if [ -z "$(find . -maxdepth 1 -name '*.tf' 2>/dev/null)" ]; then
     echo -e "${RED}  Error: no Terraform configuration files found for this module.${RST}"
     echo -e "${YEL}  The module may not have its .tf files added to the repository yet.${RST}"
@@ -69,7 +67,6 @@ if [ -z "$(find . -maxdepth 1 -name '*.tf' 2>/dev/null)" ]; then
 fi
 
 # ── Terraform ────────────────────────────────
-local _tf_log
 _tf_log=$(mktemp)
 
 echo ""
@@ -101,22 +98,11 @@ fi
 rm -f "$_tf_log"
 
 echo ""
-echo -e "${GRN}  ✔ Custom Analytics deployed successfully.${RST}"
+echo -e "${GRN}  ✔ Openclaw Directory Created analytic deployed successfully.${RST}"
 
-# ── Save a copy of what was deployed ─────────
-local _module_name
-_module_name=$(basename "$MODULE")
-local _dest="${HOME}/Desktop/terraforno/${_module_name}"
-rm -rf "$_dest"
-mkdir -p "$_dest"
-cp -r . "$_dest/"
-find "$_dest" -name "deploy.sh"  -delete
-find "$_dest" -name "tfplan"     -delete
-find "$_dest" -name "*.tfstate*" -delete
-find "$_dest" -name ".terraform" -type d -prune -exec rm -rf {} + 2>/dev/null || true
-open "$_dest" 2>/dev/null
-echo -e "${GRN}  ✔ Deployed configuration saved to ~/Desktop/terraforno/${_module_name}/${RST}"
-# ── Clean up ─────────────────────────────
+export_terraform_config "$MODULE" "$GITHUB_REPO"
+
+# ── Clean up ─────────────────────────────────
 auth_cleanup
 rm -rf "$WORK_DIR"
 echo ""
