@@ -15,5 +15,7 @@ resource "jamfprotect_analytic" "open_claw_directory_created" {
   level      = 0
   tags = []
 
+  snapshot_files = []
+
   context_item = []
 }
