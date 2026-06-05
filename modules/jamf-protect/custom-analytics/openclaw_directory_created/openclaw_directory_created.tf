@@ -14,8 +14,10 @@ resource "jamfprotect_analytic" "open_claw_directory_created" {
   severity   = "Informational"
   level      = 0
   tags = []
-
   snapshot_files = []
-
   context_item = []
+
+  lifecycle {
+    ignore_changes = [filter]
+  }
 }
