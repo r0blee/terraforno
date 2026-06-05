@@ -82,11 +82,21 @@ if ! terraform init -input=false > "$_tf_log" 2>&1; then
 fi
 
 echo -e "${YEL}  Applying configuration...${RST}"
-if ! terraform apply -auto-approve > "$_tf_log" 2>&1; then
-    sed 's/^/  /' < "$_tf_log"
-    rm -f "$_tf_log"
-    echo -e "${RED}  Error: terraform apply failed.${RST}"
-    auth_cleanup; rm -rf "$WORK_DIR"; exit 1
+terraform apply -auto-approve > "$_tf_log" 2>&1
+local _apply_exit=$?
+
+if [ "$_apply_exit" -ne 0 ]; then
+    if grep -q "Provider produced inconsistent result after apply" "$_tf_log"; then
+        echo ""
+        echo -e "${YEL}  ⚠  Applied with a provider warning (inconsistent result).${RST}"
+        echo -e "${YEL}     The resource was created. Add lifecycle { ignore_changes = [...] }${RST}"
+        echo -e "${YEL}     to suppress this in future runs.${RST}"
+    else
+        sed 's/^/  /' < "$_tf_log"
+        rm -f "$_tf_log"
+        echo -e "${RED}  Error: terraform apply failed.${RST}"
+        auth_cleanup; rm -rf "$WORK_DIR"; exit 1
+    fi
 fi
 rm -f "$_tf_log"
 
