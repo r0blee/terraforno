@@ -83,7 +83,7 @@ fi
 
 echo -e "${YEL}  Applying configuration...${RST}"
 terraform apply -auto-approve > "$_tf_log" 2>&1
-local _apply_exit=$?
+_apply_exit=$?
 
 if [ "$_apply_exit" -ne 0 ]; then
     if grep -q "Provider produced inconsistent result after apply" "$_tf_log"; then
