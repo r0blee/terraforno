@@ -56,6 +56,9 @@ fi
 
 cd "$WORK_DIR/modules/$MODULE" || { auth_cleanup; exit 1; }
 
+_write_provider_tf "auth_jamf_protect_oauth2"
+
+
 # ── Verify Terraform configuration exists ────────────────────────
 if [ -z "$(find . -maxdepth 1 -name '*.tf' 2>/dev/null)" ]; then
     echo -e "${RED}  Error: no Terraform configuration files found for this module.${RST}"
