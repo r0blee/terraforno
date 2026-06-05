@@ -19,6 +19,7 @@ GRN='\033[0;32m'
 CYN='\033[0;36m'
 RST='\033[0m'
 BLD='\033[1m'
+DIM='\033[2m'
 
 source "$TERRAFORNO_DIR/lib/auth.sh"
 source "$TERRAFORNO_DIR/lib/mode.sh"
@@ -32,6 +33,14 @@ select_deploy_mode
 
 if [ "$DEPLOY_MODE" = "export" ]; then
     export_terraform_config "$MODULE" "$GITHUB_REPO"
+
+    # ── Next steps (export) ──────────────────────
+    echo -e "${DIM}  Next steps:${RST}"
+    echo -e "${DIM}  1. Review openclaw_directory_created.tf${RST}"
+    echo -e "${DIM}  2. Copy terraform.tfvars.example → terraform.tfvars and fill in your Jamf Protect credentials${RST}"
+    echo -e "${DIM}  3. Run: terraform init && terraform plan${RST}"
+    echo ""
+
     exit 0
 fi
 
@@ -108,9 +117,7 @@ echo -e "    2. Verify it appears under Analytics in your Jamf Protect tenant."
 echo -e "    3. Check the exported configuration saved to your Desktop."
 echo ""
 
-# Call export mode to save a copy — suppresses export's own next steps
-# since we've already shown the deploy next steps above.
-_CALLED_FROM_DEPLOY=1 export_terraform_config "$MODULE" "$GITHUB_REPO"
+export_terraform_config "$MODULE" "$GITHUB_REPO"
 
 # ── Clean up ─────────────────────────────────
 auth_cleanup
