@@ -1,0 +1,1 @@
+Instructions for how to use the openclaw install custom analytic
