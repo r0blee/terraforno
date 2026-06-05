@@ -3,7 +3,7 @@
 # and are provided as-is.
 # OpenClaw directory created in user's home folder.
 
-resource "jamfprotect_analytic" "open_claw_directory_created" {
+resource "jamfprotect_analytic" "openclaw_directory_created" {
   name        = "OpenClaw directory created"
   description = "Detection of OpenClaw's hidden directory, created during setup."
 

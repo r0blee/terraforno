@@ -115,7 +115,7 @@ echo -e "${CYN}  What to do next:${RST}"
 echo -e "    1. The analytic is now active in Jamf Protect."
 echo -e "    2. Verify it appears under Analytics > Custom Analytics in your Jamf Protect tenant."
 echo -e "    3. Add the analytic to any relevant analytic sets in your terraform configuration.\
-    This you would need to reference 'jamfprotect_analytic.open_claw_directory_created.id' in your terraform configuration."
+    This you would need to reference 'jamfprotect_analytic.openclaw_directory_created.id' in your terraform configuration."
 echo ""
 
 export_terraform_config "$MODULE" "$GITHUB_REPO"
