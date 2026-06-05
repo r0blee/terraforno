@@ -9,14 +9,14 @@ maintainers:
     github: "r0blee"
 
 providers:
-  - name: "Jamf Pro Terraform Provider"
+  - name: "Jamf Pro"
     by: "Deployment Theory"
     url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
-  - name: "Jamf Protect Terraform Provider"
-    by: "Deployment Theory"
+  - name: "Jamf Protect"
+    by: "Jamf Concepts"
     url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
-  - name: "Jamf Platform Terraform Provider"
-    by: "Deployment Theory"
+  - name: "Jamf Platform"
+    by: "Jamf Concepts"
     url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
 
 built_with:
@@ -26,9 +26,6 @@ built_with:
     description: "YAML parsing, menu generation, and module resolution"
   - name: "Terraform"
     description: "The infrastructure-as-code engine doing the actual work"
-  - name: "Jamformer"
-    description: "Inspiration, pixel art, and proof this could be done"
-    url: "https://github.com/Jamf-Concepts/jamformer"
   - name: "macOS Keychain"
     description: "Secure credential storage — no plaintext, ever"
 
@@ -37,4 +34,4 @@ testers:
     note: "Thank you for your time and feedback"
 
 copyright: "© Jamf Software LLC 2026. All rights reserved."
-tagline: "Built by Jamf, for Jamf — thank you for every run, every report, and every recipe suggestion."
+tagline: "Built by Jamf Concepts — thank you for every run, every report, and every recipe suggestion."
