@@ -68,25 +68,44 @@ if [ -z "$(find . -maxdepth 1 -name '*.tf' 2>/dev/null)" ]; then
     exit 1
 fi
 
-# ── Terraform ────────────────────────────
-echo ""
-echo -e "${YEL}  Initialising Terraform...${RST}"
-terraform init -input=false 2>&1 | sed 's/^/  /'
+# ── Terraform ────────────────────────────────
+local _tf_log
+_tf_log=$(mktemp)
 
 echo ""
-echo -e "${YEL}  Planning...${RST}"
-terraform plan -out=tfplan 2>&1 | sed 's/^/  /'
-
-echo ""
-read -rp "  Apply this plan? (yes/no): " confirm
-if [ "$confirm" = "yes" ]; then
-    terraform apply tfplan 2>&1 | sed 's/^/  /'
-    echo ""
-    echo -e "${GRN}  ✔ Custom Analytics deployed successfully.${RST}"
-else
-    echo -e "${YEL}  Aborted — no changes applied.${RST}"
+echo -e "${YEL}  Initialising...${RST}"
+if ! terraform init -input=false > "$_tf_log" 2>&1; then
+    sed 's/^/  /' < "$_tf_log"
+    rm -f "$_tf_log"
+    echo -e "${RED}  Error: terraform init failed.${RST}"
+    auth_cleanup; rm -rf "$WORK_DIR"; exit 1
 fi
 
+echo -e "${YEL}  Applying configuration...${RST}"
+if ! terraform apply -auto-approve > "$_tf_log" 2>&1; then
+    sed 's/^/  /' < "$_tf_log"
+    rm -f "$_tf_log"
+    echo -e "${RED}  Error: terraform apply failed.${RST}"
+    auth_cleanup; rm -rf "$WORK_DIR"; exit 1
+fi
+rm -f "$_tf_log"
+
+echo ""
+echo -e "${GRN}  ✔ Custom Analytics deployed successfully.${RST}"
+
+# ── Save a copy of what was deployed ─────────
+local _module_name
+_module_name=$(basename "$MODULE")
+local _dest="${HOME}/Desktop/terraforno/${_module_name}"
+rm -rf "$_dest"
+mkdir -p "$_dest"
+cp -r . "$_dest/"
+find "$_dest" -name "deploy.sh"  -delete
+find "$_dest" -name "tfplan"     -delete
+find "$_dest" -name "*.tfstate*" -delete
+find "$_dest" -name ".terraform" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+open "$_dest" 2>/dev/null
+echo -e "${GRN}  ✔ Deployed configuration saved to ~/Desktop/terraforno/${_module_name}/${RST}"
 # ── Clean up ─────────────────────────────
 auth_cleanup
 rm -rf "$WORK_DIR"
