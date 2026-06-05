@@ -1,0 +1,40 @@
+# ═══════════════════════════════════════════════════════════════
+#  terraforno — credits.yaml
+#  Fetched by ./terraforno --credits
+# ═══════════════════════════════════════════════════════════════
+
+maintainers:
+  - name: "Rob Lee"
+    role: "Creator & Lead Developer"
+    github: "r0blee"
+
+providers:
+  - name: "Jamf Pro Terraform Provider"
+    by: "Deployment Theory"
+    url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
+  - name: "Jamf Protect Terraform Provider"
+    by: "Deployment Theory"
+    url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
+  - name: "Jamf Platform Terraform Provider"
+    by: "Deployment Theory"
+    url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
+
+built_with:
+  - name: "bash"
+    description: "Powers the binary — the shell that ships on every Mac"
+  - name: "Python"
+    description: "YAML parsing, menu generation, and module resolution"
+  - name: "Terraform"
+    description: "The infrastructure-as-code engine doing the actual work"
+  - name: "Jamformer"
+    description: "Inspiration, pixel art, and proof this could be done"
+    url: "https://github.com/Jamf-Concepts/jamformer"
+  - name: "macOS Keychain"
+    description: "Secure credential storage — no plaintext, ever"
+
+testers:
+  - name: "Add your testers here"
+    note: "Thank you for your time and feedback"
+
+copyright: "© Jamf Software LLC 2026. All rights reserved."
+tagline: "Built by Jamf, for Jamf — thank you for every run, every report, and every recipe suggestion."
