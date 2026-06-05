@@ -37,7 +37,7 @@ if [ "$DEPLOY_MODE" = "export" ]; then
     # ── Next steps (export) ──────────────────────
     echo -e "${DIM}  Next steps:${RST}"
     echo -e "${DIM}  1. Review openclaw_directory_created.tf${RST}"
-    echo -e "${DIM}  2. Copy terraform.tfvars.example → terraform.tfvars and fill in your Jamf Protect credentials${RST}"
+    echo -e "${DIM}  2. Copy the configuration file into your existing terraform directory or copy out the resources blocks into your existing configuration file.${RST}"
     echo -e "${DIM}  3. Run: terraform init && terraform plan${RST}"
     echo ""
 
@@ -113,8 +113,9 @@ echo -e "${GRN}  ✔ Openclaw Directory Created analytic deployed successfully.$
 echo ""
 echo -e "${CYN}  What to do next:${RST}"
 echo -e "    1. The analytic is now active in Jamf Protect."
-echo -e "    2. Verify it appears under Analytics in your Jamf Protect tenant."
-echo -e "    3. Check the exported configuration saved to your Desktop."
+echo -e "    2. Verify it appears under Analytics > Custom Analytics in your Jamf Protect tenant."
+echo -e "    3. Add the analytic to any relevant analytic sets in your terraform configuration.\
+    This you would need to reference 'jamfprotect_analytic.open_claw_directory_created.id' in your terraform configuration."
 echo ""
 
 export_terraform_config "$MODULE" "$GITHUB_REPO"
