@@ -11,13 +11,16 @@ maintainers:
 providers:
   - name: "Jamf Pro"
     by: "Deployment Theory"
-    url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
+    url: "https://registry.terraform.io/providers/deploymenttheory/jamfpro/latest"
   - name: "Jamf Protect"
     by: "Jamf Concepts"
-    url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
+    url: "https://registry.terraform.io/providers/Jamf-Concepts/jamfprotect/latest"
   - name: "Jamf Platform"
     by: "Jamf Concepts"
-    url: "https://github.com/deploymenttheory/terraform-provider-jamfpro"
+    url: "https://registry.terraform.io/providers/Jamf-Concepts/jamfplatform/latest"
+  - name: "Jamf Security Cloud"
+    by: "Jamf Concepts"
+    url: "https://registry.terraform.io/providers/Jamf-Concepts/jsctfprovider/latest"
 
 built_with:
   - name: "bash"
