@@ -24,3 +24,8 @@ Upon completion a copy of the deployed Terraform resource blocks will be left in
 #### Export
 
 If choosing to export the associated Terrform configuration you will be presented with a directory on your desktop containing the associated Terraform configuration that you can run as is, or copy the resource blocks out into your own Terraform configuration for inclusion. 
+
+##### Example usage:
+
+````bash
+terraforno --module jamf-protect/custom-analytics/openclaw_directory_created --profile prod --mode <deploy|export> --override <yes|no>
