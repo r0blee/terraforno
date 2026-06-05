@@ -4,7 +4,7 @@
 # OpenClaw installation via commands found on openclaw.ai.
 
 resource "jamfprotect_analytic" "open_claw_installation" {
-  name        = "OpenClaw installation"
+  name        = "OpenClaw Installation"
   description = "Detection of OpenClaw installation commands from openclaw.ai."
 
   sensor_type = "Process Event"

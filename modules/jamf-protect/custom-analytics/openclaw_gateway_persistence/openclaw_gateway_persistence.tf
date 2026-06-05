@@ -4,7 +4,7 @@
 # LaunchAgent created for OpenClaw's gateway mechanism.
 
 resource "jamfprotect_analytic" "open_claw_gateway_persistence" {
-  name        = "OpenClaw gateway persistence"
+  name        = "OpenClaw Gateway Persistence"
   description = "Detection of OpenClaw's gateway persistence (~/Library/LaunchAgents/ai.openclaw.gateway.plist)."
 
   sensor_type = "File System Event"

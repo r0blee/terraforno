@@ -4,7 +4,7 @@
 # OpenClaw directory created in user's home folder.
 
 resource "jamfprotect_analytic" "openclaw_directory_created" {
-  name        = "OpenClaw directory created"
+  name        = "OpenClaw Directory Created"
   description = "Detection of OpenClaw's hidden directory, created during setup."
 
   sensor_type = "File System Event"

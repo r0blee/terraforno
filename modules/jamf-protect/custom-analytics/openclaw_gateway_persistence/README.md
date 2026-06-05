@@ -4,7 +4,7 @@ Thank you for using Terraforno to configure your Jamf environment.
 
 # Custom Analytics
 
-## openclaw_directory_created
+## openclaw_gateway_persistence
 
 ### module: jamf-protect/custom-analytics/openclaw_gateway_persistence
 
