@@ -6,7 +6,7 @@ Thank you for using Terraforno to configure your Jamf environment.
 
 ## openclaw_directory_created
 
-### jamf-protect/custom-analytics/openclaw_directory_created
+### module: jamf-protect/custom-analytics/openclaw_directory_created
 
 This module creates a Custom Analytic within Jamf Protect that performs the detection of OpenClaw's hidden directory, created during setup.
 
