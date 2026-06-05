@@ -89,6 +89,16 @@ menu:
         auth: auth_jamf_pro
         status: coming-soon
 
+      - id: internal-test
+        label: Internal Jamf internal-test
+        description: "Configure a super secret internal test"
+        module: "modules/jamf-pro/internal-test"
+        apis:
+          - jamf-pro
+          - jamf-platform
+        auth: auth_jamf_pro
+        status: internal
+
   - id: jamf-protect
     label: "Jamf Protect"
     description: "Configurations for Jamf Protect using the Jamf Protect API"
