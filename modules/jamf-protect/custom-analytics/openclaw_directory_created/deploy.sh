@@ -100,7 +100,17 @@ rm -f "$_tf_log"
 echo ""
 echo -e "${GRN}  ✔ Openclaw Directory Created analytic deployed successfully.${RST}"
 
-export_terraform_config "$MODULE" "$GITHUB_REPO"
+# ── Next steps (deploy) ──────────────────────
+echo ""
+echo -e "${CYN}  What to do next:${RST}"
+echo -e "    1. The analytic is now active in Jamf Protect."
+echo -e "    2. Verify it appears under Analytics in your Jamf Protect tenant."
+echo -e "    3. Check the exported configuration saved to your Desktop."
+echo ""
+
+# Call export mode to save a copy — suppresses export's own next steps
+# since we've already shown the deploy next steps above.
+_CALLED_FROM_DEPLOY=1 export_terraform_config "$MODULE" "$GITHUB_REPO"
 
 # ── Clean up ─────────────────────────────────
 auth_cleanup
