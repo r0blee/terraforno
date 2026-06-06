@@ -9,7 +9,6 @@
 #  Provider: Jamf-Concepts/jamfprotect
 # ─────────────────────────────────────────
 
-GITHUB_REPO="https://github.com/r0blee/terraforno.git"
 MODULE="jamf-protect/custom-analytics/openclaw_directory_created"
 WORK_DIR="/tmp/terraforno/$MODULE"
 
