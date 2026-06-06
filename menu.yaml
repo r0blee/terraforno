@@ -2,7 +2,6 @@
 #  terraforno — menu.yaml
 #
 #  Fetched at startup from GitHub to dynamically build the menu.
-#  Hosted at: https://github.com/r0blee/terraforno
 #
 #  Structure:
 #    menu[]                  top-level menu items
