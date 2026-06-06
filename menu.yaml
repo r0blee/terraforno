@@ -219,4 +219,4 @@ menu:
         apis:
           - jamf-platform
         auth: auth_jamf_platform_oauth2
-        status: coming-soon
+        status: beta
