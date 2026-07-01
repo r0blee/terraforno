@@ -211,6 +211,14 @@ menu:
     label: "Jamf Platform"
     description: "Configurations for Jamf Platform using the Jamf Platform APIs"
     items:
+      - id: set-and-forget-updates
+        label: "Set and Forget OS Updates"
+        description: "Configure Set and Forget OS updates using DDM in Jamf Blueprints"
+        module: "modules/jamf-platform/set-and-forget-updates"
+        apis:
+          - jamf-platform
+        auth: auth_jamf_platform_oauth2
+        status: beta
 
       - id: compliance-cis-lvl1
         label: "Configure CIS Level 1 Benchmark"
