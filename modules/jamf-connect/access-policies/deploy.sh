@@ -9,7 +9,6 @@
 #  Provider: Jamf Connect Terraform Provider
 # ─────────────────────────────────────────
 
-GITHUB_REPO="https://github.com/r0blee/terraforno.git"
 MODULE="jamf-connect/access-policies"
 WORK_DIR="/tmp/terraforno/jamf-connect/access-policies"
 

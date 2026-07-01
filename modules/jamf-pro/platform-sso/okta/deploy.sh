@@ -9,7 +9,6 @@
 #  Provider: Jamf Pro + Okta Terraform Providers
 # ─────────────────────────────────────────
 
-GITHUB_REPO="https://github.com/r0blee/terraforno.git"
 MODULE="jamf-pro/platform-sso/okta"
 WORK_DIR="/tmp/terraforno/platform-sso-okta"
 

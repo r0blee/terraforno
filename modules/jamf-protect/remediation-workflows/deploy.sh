@@ -9,7 +9,6 @@
 #  Provider: Jamf Protect Terraform Provider
 # ─────────────────────────────────────────
 
-GITHUB_REPO="https://github.com/r0blee/terraforno.git"
 MODULE="jamf-protect/remediation-workflows"
 WORK_DIR="/tmp/terraforno/jamf-protect/remediation-workflows"
 

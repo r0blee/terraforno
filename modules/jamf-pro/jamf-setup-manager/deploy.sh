@@ -9,7 +9,6 @@
 #  Provider: Jamf Pro Terraform Provider
 # ─────────────────────────────────────────
 
-GITHUB_REPO="https://github.com/r0blee/terraforno.git"
 MODULE="jamf-pro/jamf-setup-manager"
 WORK_DIR="/tmp/terraforno/$MODULE"
 
