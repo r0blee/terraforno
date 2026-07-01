@@ -2,7 +2,7 @@ resource "jamfplatform_blueprints_blueprint" "set_and_forget_os_updates" {
   provider = jamfplatform
 
   deployed      = false
-  device_groups = []
+  device_groups = [1]
   name          = "Set and Forget OS updates"
   software_update = {
 
