@@ -109,7 +109,7 @@ menu:
         items:
 
           - id: openclaw_directory_created
-            label: "Create analytic for OpenClaw Directory Created"
+            label: "OpenClaw Directory Created"
             description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
             module: "modules/jamf-protect/custom-analytics/openclaw_directory_created"
             apis: 
@@ -118,7 +118,7 @@ menu:
             status: beta
 
           - id: openclaw_gateway_persistence
-            label: "Create analytic for Openclaw Gateway Persistence"
+            label: "Openclaw Gateway Persistence"
             description: "This creates a custom analytic for detection of OpenClaw's gateway persistence (~/Library/LaunchAgents/ai.openclaw.gateway.plist)."
             module: "modules/jamf-protect/custom-analytics/openclaw_gateway_persistence"
             apis: 
@@ -127,7 +127,7 @@ menu:
             status: beta
 
           - id: openclaw_install
-            label: "Create analytic for OpenClaw Install"
+            label: "OpenClaw Install"
             description: "This creates a custom analytic for detection of OpenClaw installation commands from openclaw.ai."
             module: "modules/jamf-protect/custom-analytics/openclaw_install"
             apis: 
@@ -136,7 +136,7 @@ menu:
             status: beta
 
           - id: openclaw_onboard
-            label: "Create analytic for OpenClaw Onboard"
+            label: "OpenClaw Onboard"
             description: "This creates a custom analytic for detection of OpenClaw onboard command to initiate setup."
             module: "modules/jamf-protect/custom-analytics/openclaw_onboard"
             apis: 
@@ -145,7 +145,7 @@ menu:
             status: beta
 
           - id: openclaw_skill_install_clawhub
-            label: "Create analytic for OpenClaw Skill Install ClawHub"
+            label: "OpenClaw Skill Install ClawHub"
             description: "This creates a custom analytic for detection of skills installed from Clawhub via npx command."
             module: "modules/jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
             apis: 
