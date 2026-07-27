@@ -29,8 +29,6 @@ menu:
         label: "Jamf Setup Manager"
         description: "Configure the Jamf Setup Manager enrollment experience"
         module: "modules/jamf-pro/jamf-setup-manager"
-        apis:
-          - jamf-pro
         auth: auth_jamf_platform_oauth2
         status: beta
         warning: "This module is currently being developed and may have unexepected results."
@@ -39,8 +37,6 @@ menu:
         label: "Jamf Setup Checklist"
         description: "Deploy a Jamf Setup Checklist configuration"
         module: "modules/jamf-pro/jamf-setup-checklist"
-        apis:
-          - jamf-pro
         auth: auth_jamf_platform_oauth2
         status: coming-soon
 
@@ -53,9 +49,6 @@ menu:
             label: "Entra ID"
             description: "Platform SSO using Microsoft Entra ID"
             module: "modules/jamf-pro/platform-sso/entra-id"
-            apis:
-              - jamf-pro
-              - azure-ad
             auth: auth_jamf_platform_oauth2
             status: coming-soon
 
@@ -63,9 +56,6 @@ menu:
             label: "Okta"
             description: "Platform SSO using Okta"
             module: "modules/jamf-pro/platform-sso/okta"
-            apis:
-              - jamf-pro
-              - okta
             auth: auth_jamf_platform_oauth2
             status: coming-soon
 
@@ -73,8 +63,6 @@ menu:
         label: "Jamf Setup and Reset"
         description: "Reset and reconfigure a Jamf environment"
         module: "modules/jamf-pro/jamf-setup-reset"
-        apis:
-          - jamf-pro
         auth: auth_jamf_platform_oauth2
         status: coming-soon
         warning: "This module will reset your Jamf configuration. Ensure you have a backup before proceeding."
@@ -83,8 +71,6 @@ menu:
         label: "Jamf Mobile Assist"
         description: "Configure Jamf Mobile Assist"
         module: "modules/jamf-pro/jamf-mobile-assist"
-        apis:
-          - jamf-pro
         auth: auth_jamf_platform_oauth2
         status: coming-soon
 
@@ -92,9 +78,6 @@ menu:
         label: "Internal Jamf test"
         description: "Configure a super secret internal test"
         module: "modules/jamf-pro/internal-test"
-        apis:
-          - jamf-pro
-          - jamf-platform
         auth: auth_jamf_platform_oauth2
         status: internal
 
@@ -112,8 +95,6 @@ menu:
             label: "OpenClaw Directory Created"
             description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
             module: "modules/jamf-protect/custom-analytics/openclaw_directory_created"
-            apis: 
-              - jamf-protect
             auth: auth_jamf_protect_oauth2
             status: beta
 
@@ -121,8 +102,6 @@ menu:
             label: "Openclaw Gateway Persistence"
             description: "This creates a custom analytic for detection of OpenClaw's gateway persistence (~/Library/LaunchAgents/ai.openclaw.gateway.plist)."
             module: "modules/jamf-protect/custom-analytics/openclaw_gateway_persistence"
-            apis: 
-              - jamf-protect
             auth: auth_jamf_protect_oauth2
             status: beta
 
@@ -130,8 +109,6 @@ menu:
             label: "OpenClaw Install"
             description: "This creates a custom analytic for detection of OpenClaw installation commands from openclaw.ai."
             module: "modules/jamf-protect/custom-analytics/openclaw_install"
-            apis: 
-              - jamf-protect
             auth: auth_jamf_protect_oauth2
             status: beta
 
@@ -139,8 +116,6 @@ menu:
             label: "OpenClaw Onboard"
             description: "This creates a custom analytic for detection of OpenClaw onboard command to initiate setup."
             module: "modules/jamf-protect/custom-analytics/openclaw_onboard"
-            apis: 
-              - jamf-protect
             auth: auth_jamf_protect_oauth2
             status: beta
 
@@ -148,8 +123,6 @@ menu:
             label: "OpenClaw Skill Install ClawHub"
             description: "This creates a custom analytic for detection of skills installed from Clawhub via npx command."
             module: "modules/jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
-            apis: 
-              - jamf-protect
             auth: auth_jamf_protect_oauth2
             status: beta
 
@@ -162,8 +135,6 @@ menu:
             label: "RemediaSOAR"
             description: "Configure a RemediaSOAR example Workflows"
             module: modules/jamf-protect/remediations/remediasoar
-            apis:
-              - jamf-pro
             auth: auth_jamf_platform_oauth2
             status: coming-soon
 
@@ -171,8 +142,6 @@ menu:
             label: "Aftermath"
             description: "Configure a remediation using Aftermath SOAR Playbook"
             module: modules/jamf-protect/remediations/aftermath
-            apis:
-              - jamf-pro
             auth: auth_jamf_platform_oauth2
             status: coming-soon
 
@@ -185,8 +154,6 @@ menu:
         label: "Configure Jamf Connect Login"
         description: "Configure Jamf Connect login window settings and identity provider"
         module: "modules/jamf-connect/connect-login"
-        apis:
-          - jamf-pro
         auth: auth_jamf_platform_oauth2
         status: coming-soon
 
@@ -194,8 +161,6 @@ menu:
         label: "Configure Privilege Elevation"
         description: "Configure Jamf Connect privilege elevation policies"
         module: "modules/jamf-connect/privilege-elevation"
-        apis:
-          - jamf-pro
         auth: auth_jamf_platform_oauth2
         status: coming-soon
 
@@ -203,8 +168,6 @@ menu:
         label: "Configure Access Policies"
         description: "Configure access policies via the Jamf Security Cloud"
         module: "modules/jamf-connect/access-policies"
-        apis:
-          - jamf-security-cloud
         auth: auth_jamf_security_cloud_oauth2
         status: coming-soon
   - id: jamf-platform
@@ -215,8 +178,6 @@ menu:
         label: "Set and Forget OS Updates"
         description: "Configure Set and Forget OS updates using DDM in Jamf Blueprints"
         module: "modules/jamf-platform/set-and-forget-updates"
-        apis:
-          - jamf-platform
         auth: auth_jamf_platform_oauth2
         status: beta
 
@@ -224,7 +185,5 @@ menu:
         label: "Configure CIS Level 1 Benchmark"
         description: "Configure CIS Level 1 Compliance Benchmark"
         module: "modules/jamf-platform/cis-lvl1"
-        apis:
-          - jamf-platform
         auth: auth_jamf_platform_oauth2
         status: beta
