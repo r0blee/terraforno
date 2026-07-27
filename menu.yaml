@@ -31,7 +31,7 @@ menu:
         module: "modules/jamf-pro/jamf-setup-manager"
         apis:
           - jamf-pro
-        auth: auth_jamf_pro
+        auth: auth_jamf_platform_oauth2
         status: beta
         warning: "This module is currently being developed and may have unexepected results."
 
@@ -41,7 +41,7 @@ menu:
         module: "modules/jamf-pro/jamf-setup-checklist"
         apis:
           - jamf-pro
-        auth: auth_jamf_pro
+        auth: auth_jamf_platform_oauth2
         status: coming-soon
 
       - id: platform-sso
@@ -56,7 +56,7 @@ menu:
             apis:
               - jamf-pro
               - azure-ad
-            auth: auth_jamf_pro
+            auth: auth_jamf_platform_oauth2
             status: coming-soon
 
           - id: okta
@@ -66,7 +66,7 @@ menu:
             apis:
               - jamf-pro
               - okta
-            auth: auth_jamf_pro
+            auth: auth_jamf_platform_oauth2
             status: coming-soon
 
       - id: jamf-setup-reset
@@ -75,7 +75,7 @@ menu:
         module: "modules/jamf-pro/jamf-setup-reset"
         apis:
           - jamf-pro
-        auth: auth_jamf_pro
+        auth: auth_jamf_platform_oauth2
         status: coming-soon
         warning: "This module will reset your Jamf configuration. Ensure you have a backup before proceeding."
 
@@ -85,7 +85,7 @@ menu:
         module: "modules/jamf-pro/jamf-mobile-assist"
         apis:
           - jamf-pro
-        auth: auth_jamf_pro
+        auth: auth_jamf_platform_oauth2
         status: coming-soon
 
       - id: internal-test
@@ -95,7 +95,7 @@ menu:
         apis:
           - jamf-pro
           - jamf-platform
-        auth: auth_jamf_pro
+        auth: auth_jamf_platform_oauth2
         status: internal
 
   - id: jamf-protect
@@ -164,7 +164,7 @@ menu:
             module: modules/jamf-protect/remediations/remediasoar
             apis:
               - jamf-pro
-            auth: auth_jamf_pro
+            auth: auth_jamf_platform_oauth2
             status: coming-soon
 
           - id: aftermath
@@ -173,7 +173,7 @@ menu:
             module: modules/jamf-protect/remediations/aftermath
             apis:
               - jamf-pro
-            auth: auth_jamf_pro
+            auth: auth_jamf_platform_oauth2
             status: coming-soon
 
   - id: jamf-connect
@@ -187,7 +187,7 @@ menu:
         module: "modules/jamf-connect/connect-login"
         apis:
           - jamf-pro
-        auth: auth_jamf_connect
+        auth: auth_jamf_platform_oauth2
         status: coming-soon
 
       - id: privilege-elevation
@@ -196,7 +196,7 @@ menu:
         module: "modules/jamf-connect/privilege-elevation"
         apis:
           - jamf-pro
-        auth: auth_jamf_pro
+        auth: auth_jamf_platform_oauth2
         status: coming-soon
 
       - id: access-policies
