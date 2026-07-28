@@ -80,6 +80,7 @@ menu:
         module: "modules/jamf-pro/internal-test"
         auth: auth_jamf_platform_oauth2
         status: internal
+        warning: "This module currently doesn't do anything. It is merely to prove that the secret token is detected"
 
   - id: jamf-protect
     label: "Jamf Protect"
