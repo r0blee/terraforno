@@ -47,14 +47,14 @@ menu:
 
           - id: entra-id
             label: "Entra ID"
-            description: "Platform SSO using Microsoft Entra ID"
+            description: "An example Platform SSO configuration with Microsoft Entra ID that you can adjust with your own organisational settings."
             module: "modules/jamf-pro/platform-sso/entra-id"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
 
           - id: okta
             label: "Okta"
-            description: "Platform SSO using Okta"
+            description: "An example Platform SSO configuration with Microsoft Entra ID that you can adjust with your own organisational settings."
             module: "modules/jamf-pro/platform-sso/okta"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
@@ -65,7 +65,7 @@ menu:
         module: "modules/jamf-pro/jamf-setup-reset"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
-        warning: "This module will reset your Jamf configuration. Ensure you have a backup before proceeding."
+        warning: "Expected: Q3 2026"
 
       - id: jamf-mobile-assist
         label: "Jamf Mobile Assist"
