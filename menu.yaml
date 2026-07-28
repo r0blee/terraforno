@@ -83,7 +83,7 @@ menu:
         warning: "This module currently doesn't do anything. It is merely to prove that the secret token is detected"
 
 
-       - id: worlds-greatest-onboarding
+      - id: worlds-greatest-onboarding
         label: "The World's Greatest Onboarding"
         description: "Runs Jamf Setup Manager, Platform SSO (Entra ID), and the Jamf Setup Checklist in order — stops if a step fails"
         workflow:
