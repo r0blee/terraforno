@@ -75,7 +75,7 @@ menu:
         status: coming-soon
 
       - id: internal-test
-        label: "Internal Jamf test - refresh test"
+        label: "Internal Jamf test"
         description: "Configure a super secret internal test"
         module: "modules/jamf-pro/internal-test"
         auth: auth_jamf_platform_oauth2
