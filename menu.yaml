@@ -182,6 +182,7 @@ menu:
         module: "modules/jamf-connect/access-policies"
         auth: auth_jamf_security_cloud_oauth2
         status: coming-soon
+        
   - id: jamf-platform
     label: "Jamf Platform"
     description: "Configurations for Jamf Platform using the Jamf Platform APIs"
