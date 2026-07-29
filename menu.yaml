@@ -27,7 +27,7 @@ menu:
     
       - id: chris-test
         label: "Chris Module"
-        description: "Chris is testing terraforno:
+        description: "Chris is testing terraforno"
         auth: auth_jamf_platform_oauth2
         status: beta
         warning: "This module is currently being developed and may have unexepected results."
