@@ -25,7 +25,7 @@ menu:
     description: "Configurations for Jamf Pro using the Jamf Pro and Jamf Platform APIs"
     items:
     
-     - id: chris-test
+      - id: chris-test
         label: "Chris Module"
         description: "Chris is testing terraforno"
         module: "modules/jamf-pro/chris-test"
