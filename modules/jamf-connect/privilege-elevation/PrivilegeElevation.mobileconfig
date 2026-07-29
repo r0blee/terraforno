@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.jamf.connect</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>TemporaryUserPermissions</key>
+								<dict>
+									<key>TemporaryUserPromotion</key>
+									<true/>
+									<key>URLCommandLineElevation</key>
+									<false/>
+									<key>UserPromotionBiometrics</key>
+									<true/>
+									<key>UserPromotionChoices</key>
+									<array>
+										<string>Install Software</string>
+										<string>Install Printer</string>
+										<string>Modify System Setting</string>
+									</array>
+									<key>UserPromotionDuration</key>
+									<integer>5</integer>
+									<key>UserPromotionLimit</key>
+									<integer>2</integer>
+									<key>UserPromotionReason</key>
+									<true/>
+									<key>UserPromotionTimer</key>
+									<true/>
+								</dict>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Custom Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>3AB01595-3A51-4771-8C2B-57CDE0215DAF</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>3AB01595-3A51-4771-8C2B-57CDE0215DAF</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Privilege Elevation</string>
+	<key>PayloadIdentifier</key>
+	<string>77AFE8EF-6A55-42F4-BE62-29DB61DAC15B</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>77AFE8EF-6A55-42F4-BE62-29DB61DAC15B</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
