@@ -24,6 +24,7 @@ menu:
     label: "Jamf Pro"
     description: "Configurations for Jamf Pro using the Jamf Pro and Jamf Platform APIs"
     items:
+    
       - id: chris-test
         label: "Chris Module"
         description: "Chris is testing terraforno:
@@ -79,6 +80,7 @@ menu:
         module: "modules/jamf-pro/jamf-mobile-assist"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
+        warning: "Expected: Q3/Q4 2026"
 
       - id: internal-test
         label: "Internal Jamf test"
@@ -87,7 +89,6 @@ menu:
         auth: auth_jamf_platform_oauth2
         status: internal
         warning: "This module currently doesn't do anything. It is merely to prove that the secret token is detected"
-
 
       - id: worlds-greatest-onboarding
         label: "The World's Greatest Onboarding"
