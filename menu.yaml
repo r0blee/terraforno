@@ -24,7 +24,13 @@ menu:
     label: "Jamf Pro"
     description: "Configurations for Jamf Pro using the Jamf Pro and Jamf Platform APIs"
     items:
-
+      - id: chris-test
+        label: "Chris Module"
+        description: "Chris is testing terraforno:
+        auth: auth_jamf_platform_oauth2
+        status: beta
+        warning: "This module is currently being developed and may have unexepected results."
+        
       - id: jamf-setup-manager
         label: "Jamf Setup Manager"
         description: "Configure the Jamf Setup Manager enrollment experience"
