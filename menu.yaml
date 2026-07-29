@@ -24,14 +24,6 @@ menu:
     label: "Jamf Pro"
     description: "Configurations for Jamf Pro using the Jamf Pro and Jamf Platform APIs"
     items:
-    
-      - id: chris-test
-        label: "Chris Module"
-        description: "Chris is testing terraforno"
-        module: "modules/jamf-pro/chris-test"
-        auth: auth_jamf_platform_oauth2
-        status: beta
-        warning: "This module is currently being developed and may have unexepected results."
         
       - id: jamf-setup-manager
         label: "Jamf Setup Manager"
@@ -59,6 +51,8 @@ menu:
             module: "modules/jamf-pro/platform-sso/entra-id"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
+            warning: "Expected: Q3 2026"
+
 
           - id: okta
             label: "Okta"
@@ -66,6 +60,7 @@ menu:
             module: "modules/jamf-pro/platform-sso/okta"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
+            warning: "Expected: Q4 2026"
 
       - id: jamf-setup-reset
         label: "Jamf Setup and Reset"
@@ -98,7 +93,8 @@ menu:
           - modules/jamf-pro/jamf-setup-manager
           - modules/jamf-pro/platform-sso/entra-id
           - modules/jamf-pro/jamf-setup-checklist
-        status: beta
+        status: coming-soon
+        warning: "Expected: Q3 2026"
 
         
   - id: jamf-protect
@@ -162,6 +158,7 @@ menu:
             module: modules/jamf-protect/remediations/remediasoar
             auth: auth_jamf_platform_oauth2
             status: coming-soon
+            warning: "Expected: Q4 2026"
 
           - id: aftermath
             label: "Aftermath"
@@ -169,18 +166,19 @@ menu:
             module: modules/jamf-protect/remediations/aftermath
             auth: auth_jamf_platform_oauth2
             status: coming-soon
+            warning: "Expected: Q4 2026"
 
   - id: jamf-connect
     label: "Jamf Connect"
     description: "Configurations for Jamf Connect using the Jamf Pro and Jamf Security Cloud APIs"
     items:
 
-      - id: connect-login
-        label: "Configure Jamf Connect Login"
-        description: "Configure Jamf Connect login window settings and identity provider"
-        module: "modules/jamf-connect/connect-login"
-        auth: auth_jamf_platform_oauth2
-        status: coming-soon
+      # - id: connect-login
+      #   label: "Configure Jamf Connect Login"
+      #   description: "Configure Jamf Connect login window settings and identity provider"
+      #   module: "modules/jamf-connect/connect-login"
+      #   auth: auth_jamf_platform_oauth2
+      #   status: coming-soon
 
       - id: privilege-elevation
         label: "Configure Privilege Elevation"
@@ -188,13 +186,14 @@ menu:
         module: "modules/jamf-connect/privilege-elevation"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
+        warning: "Expected: Q3 2026"
 
-      - id: access-policies
-        label: "Configure Access Policies"
-        description: "Configure access policies via the Jamf Security Cloud"
-        module: "modules/jamf-connect/access-policies"
-        auth: auth_jamf_security_cloud_oauth2
-        status: coming-soon
+      # - id: access-policies
+      #   label: "Configure Access Policies"
+      #   description: "Configure access policies via the Jamf Security Cloud"
+      #   module: "modules/jamf-connect/access-policies"
+      #   auth: auth_jamf_security_cloud_oauth2
+      #   status: coming-soon
         
   - id: jamf-platform
     label: "Jamf Platform"
@@ -212,4 +211,5 @@ menu:
         description: "Configure CIS Level 1 Compliance Benchmark"
         module: "modules/jamf-platform/cis-lvl1"
         auth: auth_jamf_platform_oauth2
-        status: beta
+        status: coming-soon
+        warning: "Expected: Q3 2026"
