@@ -185,7 +185,7 @@ menu:
         description: "Configure Jamf Connect privilege elevation policies"
         module: "modules/jamf-connect/privilege-elevation"
         auth: auth_jamf_platform_oauth2
-        status: coming-soon
+        status: beta
         warning: "Expected: Q3 2026"
 
       # - id: access-policies
