@@ -103,6 +103,11 @@ menu:
         description: "Deploy custom analytics configurations for Jamf Protect"
         items:
 
+        id: agentic-detections
+        label: "Agentic Detections"
+        description: "Configure behavioural analytics for Agentic detections"
+        items: 
+        
           - id: openclaw_directory_created
             label: "OpenClaw Directory Created"
             description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
