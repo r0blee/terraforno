@@ -103,45 +103,45 @@ menu:
         description: "Deploy custom analytics configurations for Jamf Protect"
         items:
 
-        - id: agentic-detections
-          label: "Agentic Detections"
-          description: "Configure behavioural analytics for Agentic detections"
-          items: 
+          - id: agentic-detections
+            label: "Agentic Detections"
+            description: "Configure behavioural analytics for Agentic detections"
+            items: 
         
-          - id: openclaw_directory_created
-            label: "OpenClaw Directory Created"
-            description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
-            module: "modules/jamf-protect/custom-analytics/openclaw_directory_created"
-            auth: auth_jamf_protect_oauth2
-            status: stable
+            - id: openclaw_directory_created
+              label: "OpenClaw Directory Created"
+              description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
+              module: "modules/jamf-protect/custom-analytics/openclaw_directory_created"
+              auth: auth_jamf_protect_oauth2
+              status: stable
 
-          - id: openclaw_gateway_persistence
-            label: "Openclaw Gateway Persistence"
-            description: "This creates a custom analytic for detection of OpenClaw's gateway persistence (~/Library/LaunchAgents/ai.openclaw.gateway.plist)."
-            module: "modules/jamf-protect/custom-analytics/openclaw_gateway_persistence"
-            auth: auth_jamf_protect_oauth2
-            status: stable
+            - id: openclaw_gateway_persistence
+              label: "Openclaw Gateway Persistence"
+              description: "This creates a custom analytic for detection of OpenClaw's gateway persistence (~/Library/LaunchAgents/ai.openclaw.gateway.plist)."
+              module: "modules/jamf-protect/custom-analytics/openclaw_gateway_persistence"
+              auth: auth_jamf_protect_oauth2
+              status: stable
 
-          - id: openclaw_install
-            label: "OpenClaw Install"
-            description: "This creates a custom analytic for detection of OpenClaw installation commands from openclaw.ai."
-            module: "modules/jamf-protect/custom-analytics/openclaw_install"
-            auth: auth_jamf_protect_oauth2
-            status: stable
+            - id: openclaw_install
+              label: "OpenClaw Install"
+              description: "This creates a custom analytic for detection of OpenClaw installation commands from openclaw.ai."
+              module: "modules/jamf-protect/custom-analytics/openclaw_install"
+              auth: auth_jamf_protect_oauth2
+              status: stable
 
-          - id: openclaw_onboard
-            label: "OpenClaw Onboard"
-            description: "This creates a custom analytic for detection of OpenClaw onboard command to initiate setup."
-            module: "modules/jamf-protect/custom-analytics/openclaw_onboard"
-            auth: auth_jamf_protect_oauth2
-            status: stable
+            - id: openclaw_onboard
+              label: "OpenClaw Onboard"
+              description: "This creates a custom analytic for detection of OpenClaw onboard command to initiate setup."
+              module: "modules/jamf-protect/custom-analytics/openclaw_onboard"
+              auth: auth_jamf_protect_oauth2
+              status: stable
 
-          - id: openclaw_skill_install_clawhub
-            label: "OpenClaw Skill Install ClawHub"
-            description: "This creates a custom analytic for detection of skills installed from Clawhub via npx command."
-            module: "modules/jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
-            auth: auth_jamf_protect_oauth2
-            status: stable
+            - id: openclaw_skill_install_clawhub
+              label: "OpenClaw Skill Install ClawHub"
+              description: "This creates a custom analytic for detection of skills installed from Clawhub via npx command."
+              module: "modules/jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
+              auth: auth_jamf_protect_oauth2
+              status: stable
 
       - id: remediation-workflows
         label: "Remediation Workflows"
