@@ -12,7 +12,7 @@
 #      .module               relative path to the deploy.sh folder (leaf nodes only)
 #      .apis[]               which Jamf APIs this module uses
 #      .auth                 auth function to call (from lib/auth.sh)
-#      .status               stable | beta | coming-soon
+#      .status               stable | beta | coming-soon | deprecated
 #      .warning              optional warning shown before deploy mode selection
 # ═══════════════════════════════════════════════════════════════
 
@@ -93,7 +93,7 @@ menu:
           - modules/jamf-pro/jamf-setup-manager
           - modules/jamf-pro/platform-sso/entra-id
           - modules/jamf-pro/jamf-setup-checklist
-        status: coming-soon
+        status: deprecated
         warning: "Expected: Q3 2026"
 
         
