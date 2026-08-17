@@ -7,6 +7,9 @@ maintainers:
   - name: "Rob Lee"
     role: "Creator & Lead Developer"
     github: "r0blee"
+  - name: "Neil Martin"
+    role: "Lead developer for Jamfs Terraform providers"
+    github: "neilmartin83"
 
 providers:
   - name: "Jamf Platform"
