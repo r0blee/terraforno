@@ -28,7 +28,7 @@ menu:
       - id: jamf-setup-manager
         label: "Jamf Setup Manager"
         description: "Configure the Jamf Setup Manager enrollment experience"
-        module: "modules/jamf-pro/jamf-setup-manager"
+        module: "jamf-pro/jamf-setup-manager"
         auth: auth_jamf_platform_oauth2
         status: beta
         warning: "This module is currently being developed and may have unexepected results."
@@ -36,7 +36,7 @@ menu:
       - id: jamf-setup-checklist
         label: "Jamf Setup Checklist"
         description: "Deploy a Jamf Setup Checklist configuration"
-        module: "modules/jamf-pro/jamf-setup-checklist"
+        module: "jamf-pro/jamf-setup-checklist"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
 
@@ -48,7 +48,7 @@ menu:
           - id: entra-id
             label: "Entra ID"
             description: "An example Platform SSO configuration with Microsoft Entra ID that you can adjust with your own organisational settings."
-            module: "modules/jamf-pro/platform-sso/entra-id"
+            module: "jamf-pro/platform-sso/entra-id"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
             warning: "Expected: Q3 2026"
@@ -57,7 +57,7 @@ menu:
           - id: okta
             label: "Okta"
             description: "An example Platform SSO configuration with Microsoft Entra ID that you can adjust with your own organisational settings."
-            module: "modules/jamf-pro/platform-sso/okta"
+            module: "jamf-pro/platform-sso/okta"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
             warning: "Expected: Q4 2026"
@@ -65,7 +65,7 @@ menu:
       - id: jamf-setup-reset
         label: "Jamf Setup and Reset"
         description: "Reset and reconfigure a Jamf environment"
-        module: "modules/jamf-pro/jamf-setup-reset"
+        module: "jamf-pro/jamf-setup-reset"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
         warning: "Expected: Q3 2026"
@@ -73,7 +73,7 @@ menu:
       - id: jamf-mobile-assist
         label: "Jamf Mobile Assist"
         description: "Configure Jamf Mobile Assist"
-        module: "modules/jamf-pro/jamf-mobile-assist"
+        module: "jamf-pro/jamf-mobile-assist"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
         warning: "Expected: Q3/Q4 2026"
@@ -81,7 +81,7 @@ menu:
       - id: internal-test
         label: "Internal Jamf test"
         description: "Configure a super secret internal test"
-        module: "modules/jamf-pro/internal-test"
+        module: "jamf-pro/internal-test"
         auth: auth_jamf_platform_oauth2
         status: internal
         warning: "This module currently doesn't do anything. It is merely to prove that the secret token is detected"
@@ -90,9 +90,9 @@ menu:
         label: "The World's Greatest Onboarding"
         description: "Runs Jamf Setup Manager, Platform SSO (Entra ID), and the Jamf Setup Checklist in order — stops if a step fails"
         workflow:
-          - modules/jamf-pro/jamf-setup-manager
-          - modules/jamf-pro/platform-sso/entra-id
-          - modules/jamf-pro/jamf-setup-checklist
+          - jamf-pro/jamf-setup-manager
+          - jamf-pro/platform-sso/entra-id
+          - jamf-pro/jamf-setup-checklist
         status: deprecated
         warning: "Expected: Q3 2026"
 
@@ -115,35 +115,35 @@ menu:
               - id: openclaw_directory_created
                 label: "OpenClaw Directory Created"
                 description: "This creates a custom analytic that detects if the directory for OpenClaw is created."
-                module: "modules/jamf-protect/custom-analytics/openclaw_directory_created"
+                module: "jamf-protect/custom-analytics/openclaw_directory_created"
                 auth: auth_jamf_protect_oauth2
                 status: stable
 
               - id: openclaw_gateway_persistence
                 label: "Openclaw Gateway Persistence"
                 description: "This creates a custom analytic for detection of OpenClaw's gateway persistence (~/Library/LaunchAgents/ai.openclaw.gateway.plist)."
-                module: "modules/jamf-protect/custom-analytics/openclaw_gateway_persistence"
+                module: "jamf-protect/custom-analytics/openclaw_gateway_persistence"
                 auth: auth_jamf_protect_oauth2
                 status: stable
 
               - id: openclaw_install
                 label: "OpenClaw Install"
                 description: "This creates a custom analytic for detection of OpenClaw installation commands from openclaw.ai."
-                module: "modules/jamf-protect/custom-analytics/openclaw_install"
+                module: "jamf-protect/custom-analytics/openclaw_install"
                 auth: auth_jamf_protect_oauth2
                 status: stable
 
               - id: openclaw_onboard
                 label: "OpenClaw Onboard"
                 description: "This creates a custom analytic for detection of OpenClaw onboard command to initiate setup."
-                module: "modules/jamf-protect/custom-analytics/openclaw_onboard"
+                module: "jamf-protect/custom-analytics/openclaw_onboard"
                 auth: auth_jamf_protect_oauth2
                 status: stable
 
               - id: openclaw_skill_install_clawhub
                 label: "OpenClaw Skill Install ClawHub"
                 description: "This creates a custom analytic for detection of skills installed from Clawhub via npx command."
-                module: "modules/jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
+                module: "jamf-protect/custom-analytics/openclaw_skill_install_clawhub"
                 auth: auth_jamf_protect_oauth2
                 status: stable
 
@@ -155,7 +155,7 @@ menu:
           - id: remediasoar
             label: "RemediaSOAR"
             description: "Configure a RemediaSOAR example Workflows"
-            module: modules/jamf-protect/remediations/remediasoar
+            module: "jamf-protect/remediations/remediasoar"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
             warning: "Expected: Q4 2026"
@@ -163,7 +163,7 @@ menu:
           - id: aftermath
             label: "Aftermath"
             description: "Configure a remediation using Aftermath SOAR Playbook"
-            module: modules/jamf-protect/remediations/aftermath
+            module: "jamf-protect/remediations/aftermath"
             auth: auth_jamf_platform_oauth2
             status: coming-soon
             warning: "Expected: Q4 2026"
@@ -173,19 +173,20 @@ menu:
     description: "Configurations for Jamf Connect using the Jamf Pro and Jamf Security Cloud APIs"
     items:
 
-      # - id: connect-login
-      #   label: "Configure Jamf Connect Login"
-      #   description: "Configure Jamf Connect login window settings and identity provider"
-      #   module: "modules/jamf-connect/connect-login"
-      #   auth: auth_jamf_platform_oauth2
-      #   status: coming-soon
+      - id: connect-login
+        label: "Configure Jamf Connect Login"
+        description: "Configure Jamf Connect login window settings and identity provider"
+        module: "jamf-connect/connect-login"
+        auth: auth_jamf_platform_oauth2
+        status: coming-soon
+        warning: "Expected Q4 2026"
 
       - id: privilege-elevation
         label: "Configure Privilege Elevation"
         description: "Configure Jamf Connect privilege elevation policies"
-        module: "modules/jamf-connect/privilege-elevation"
+        module: "jamf-connect/privilege-elevation"
         auth: auth_jamf_platform_oauth2
-        status: beta
+        status: coming-soon
         warning: "Expected: Q3 2026"
 
       # - id: access-policies
@@ -202,14 +203,14 @@ menu:
       - id: set-and-forget-updates
         label: "Set and Forget OS Updates"
         description: "Configure Set and Forget OS updates using DDM in Jamf Blueprints"
-        module: "modules/jamf-platform/set-and-forget-updates"
+        module: "jamf-platform/set-and-forget-updates"
         auth: auth_jamf_platform_oauth2
         status: beta
 
       - id: compliance-cis-lvl1
         label: "Configure CIS Level 1 Benchmark"
         description: "Configure CIS Level 1 Compliance Benchmark"
-        module: "modules/jamf-platform/cis-lvl1"
+        module: "jamf-platform/cis-lvl1"
         auth: auth_jamf_platform_oauth2
         status: coming-soon
         warning: "Expected: Q3 2026"
