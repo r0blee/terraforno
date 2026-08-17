@@ -31,7 +31,7 @@ menu:
         module: "jamf-pro/jamf-setup-manager"
         auth: auth_jamf_platform_oauth2
         status: beta
-        warning: "This module is currently being developed and may have unexepected results."
+        warning: "This module is currently being developed and may have unexpected results."
 
       - id: jamf-setup-checklist
         label: "Jamf Setup Checklist"
