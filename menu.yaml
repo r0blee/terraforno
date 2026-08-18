@@ -29,7 +29,7 @@ menu:
         description: "Configure the Jamf Setup Manager enrollment experience"
         module: "jamf-pro/jamf-setup-manager"
         auth: auth_jamf_platform_oauth2
-        status: beta
+        status: deprecated
         warning: "This module is currently being developed and may have unexpected results."
 
       - id: jamf-setup-checklist
@@ -37,7 +37,7 @@ menu:
         description: "Deploy a Jamf Setup Checklist configuration"
         module: "jamf-pro/jamf-setup-checklist"
         auth: auth_jamf_platform_oauth2
-        status: coming-soon
+        status: beta
 
       - id: platform-sso
         label: "Platform SSO"
