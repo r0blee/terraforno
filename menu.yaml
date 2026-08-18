@@ -9,11 +9,10 @@
 #      .label                display text shown in the menu
 #      .description          one-line summary (shown on hover/detail views)
 #      .items[]              sub-menu items (omit for leaf nodes)
-#      .module               relative path to the deploy.sh folder (leaf nodes only)
-#      .apis[]               which Jamf APIs this module uses
+#      .module               relative path to the module folder containing the .tf configurations (leaf nodes only)
 #      .auth                 auth function to call (from lib/auth.sh)
-#      .status               stable | beta | coming-soon | deprecated
-#      .warning              optional warning shown before deploy mode selection
+#      .status               stable | beta | coming-soon | deprecated | workflow
+#      .warning              optional warning shown, also used for timeline expectations
 # ═══════════════════════════════════════════════════════════════
 
 version: "1.0"
